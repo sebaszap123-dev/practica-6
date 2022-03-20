@@ -1,9 +1,12 @@
-var Emitter = require("./emitter");
+// Practica 7
+var Emitter = require("events");
+const config = require("./config.js");
 
 var emtr = new Emitter();
-emtr.on("greet", () => {
+emtr.on(config.events.GREET, () => {
   console.log("Somewhere only we kwon");
 });
+/* Sigue funcionando solo que  */
 
 var emtr = new Emitter();
 emtr.on("greet", () => {
